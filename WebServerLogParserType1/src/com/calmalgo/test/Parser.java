@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 /**
  Read the log file, extract the useful data items, and write to a file.
 **/
-public class Parser {
+public class Parser implements FileWriter {
 
     private List<List<String>> listOfUsefulItems;
 
@@ -92,10 +92,15 @@ public class Parser {
 
 
 
-
-    void writeFile() {
+    @Override
+    public void writeFile() {
         Path outputPath = Path.of(Constants.OUTPUT_USEFUL_ITEMS_FILE_NAME);
+
         try (BufferedWriter writer = Files.newBufferedWriter(outputPath)) {
+
+            if (!Files.exists(outputPath))
+                Files.createFile(outputPath);
+
             for (List<String> usefulItems : listOfUsefulItems) {
                 for (String item : usefulItems) {
                     writer.write(item + " ");

@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  After getting a list of useful data items, sum up the usage volume, then write to a file.
  **/
-public class Statistics {
+public class Statistics implements FileWriter{
 
     private final List<List<String>> listOfUsefulItems;
     private final Map <String, Integer> usageVolume;
@@ -36,10 +36,15 @@ public class Statistics {
         }
     }
 
+    @Override
+    public void writeFile() {
 
-    void writeFile() {
         Path outputPath = Path.of(Constants.OUTPUT_USAGE_VOLUME_FILE_NAME);
+
         try (BufferedWriter writer = Files.newBufferedWriter(outputPath)) {
+
+            if (!Files.exists(outputPath))
+                Files.createFile(outputPath);
 
             for (Map.Entry<String, Integer> set : usageVolume.entrySet()) {
                 writer.write(set.getKey() + " " + set.getValue());
