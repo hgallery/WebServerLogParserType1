@@ -1,17 +1,17 @@
 # WebServerLogParserType1
 Purpose:
-For a specific file format, extract the useful data items, and calculate the usage volume.
+For a specific log file format, this program demonstrates how to extract the useful data items, and calculates the usage volume.
 
-This program utilizes a number of modern techniques including
-> Generics
-> Lambda Expression
-> Functional Programming
-> Non-blocking I/O ver. 2
-> var of Java 10
+A number of modern techniques are used in the program including:
+> Generics,
+> Lambda Expression,
+> Functional Programming,
+> Non-blocking I/O ver. 2,
+> var of Java 10,
 > Text Block of Java 15
 
-These developement tools have been used:
-> OpenJDK 16
+These development tools have been used:
+> OpenJDK 16,
 > IntelliJ
 
 
@@ -20,7 +20,8 @@ Output file 1: output_useful_items.txt  (The program writes the extracted items 
 Output file 2: output_usage_volume.txt  (The program writes the usage volume to this file.)
 
 
-The screen-output in Shell:
+The output in Shell looks similiar to this:
+
 
 Useful Items
 -------------------
@@ -37,5 +38,3 @@ PASTA002 2
 PASTA001 1
 VEGGIE002 2
 VEGGIE001 1
-
-
