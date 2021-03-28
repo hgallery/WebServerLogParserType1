@@ -1,17 +1,17 @@
 # WebServerLogParserType1
 
 Purpose:
-For a specific log file format, this program shows how to extract the useful data items, and sums up the usage volume.
+For a specific log file format, this program shows how to extract the useful data items, and sums up the selected data.
 
 Scenario:
 There are a number of shops that sell food items.
 Each shop has a number employees.
-There is a warehouse that supplies food merchandizes to the shops.
+There is a warehouse that supplies food items to the shops.
 Whenever employees submit an order of food item to the warehouse, the activity is logged.
 
 The package contains theses classes:
 - Parser.java: This class extracts the useful data items and stores them to a list.
-- Statistics.java: This class sums up each food ordering, and stores that data in key-value pairs in the format of <food_item, volume>
+- Statistics.java: This class sums up every food ordering, and stores that data in key-value pairs in the format of <food_item, number_of_orders>
 - Main.java: This class instantiates Parser and Statistics, and uses them.
 - Constants.java: This class has the constant values used in the project.
 
