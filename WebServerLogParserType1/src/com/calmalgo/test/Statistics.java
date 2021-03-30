@@ -10,12 +10,12 @@ import java.util.Map;
 
 
 /**
- After getting a list of useful data items, sum up the usage volume, then write to a file.
+ This class gets a list of useful data items, tallies the food order usage, and writes to a file.
  **/
-public class Statistics implements FileWriter{
+class Statistics implements FileWriter{
 
     private final List<List<String>> listOfUsefulItems;
-    private final Map <String, Integer> usageVolume;
+    private final Map<String, Integer> usageVolume;
 
     Statistics (List<List<String>> listOfUsefulItems) {
         this.listOfUsefulItems = listOfUsefulItems;
@@ -46,8 +46,8 @@ public class Statistics implements FileWriter{
             if (!Files.exists(outputPath))
                 Files.createFile(outputPath);
 
-            for (Map.Entry<String, Integer> set : usageVolume.entrySet()) {
-                writer.write(set.getKey() + " " + set.getValue());
+            for (Map.Entry<String, Integer> entry : usageVolume.entrySet()) {
+                writer.write(entry.getKey() + " " + entry.getValue());
                 writer.newLine();
             }
         }
