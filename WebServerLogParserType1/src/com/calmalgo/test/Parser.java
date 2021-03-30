@@ -11,11 +11,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
-
 /**
- Read the log file, extract the useful data items, and write to a file.
+ This class reads the log file, extracts the useful data items, and writes to a file.
 **/
-public class Parser implements FileWriter {
+class Parser implements FileWriter {
 
     private List<List<String>> listOfUsefulItems;
 
@@ -39,35 +38,28 @@ public class Parser implements FileWriter {
                 extractedItems.add(tokens[1]);     // time
                 extractedItems.add(tokens[3]);     // POST indicator
 
-
                 int indexBegin = tokens[4].lastIndexOf("/");
                 int indexEnd = tokens[4].lastIndexOf(".");
                 String foodCode = tokens[4].substring(indexBegin+1, indexEnd);
                 extractedItems.add(foodCode);      // food code
 
-
                 String[] shopAndUser = tokens[7].split("\\\\");
                 extractedItems.add(shopAndUser[0]);     // shop
                 extractedItems.add(shopAndUser[1]);     // user_id
-
             }
             else {
                 extractedItems.add("");
             }
-
         }
         else {
             extractedItems.add("");
         }
 
-
         return extractedItems;
     };
 
 
-
-    Predicate<List<String>> notEmpty = extractedItems -> !extractedItems.get(0).equals("");
-
+    Predicate<List<String>> isEmpty = extractedItems -> extractedItems.get(0).equals("");
 
 
     void extractListOfUsefulItems() {
@@ -75,21 +67,18 @@ public class Parser implements FileWriter {
         try (Stream<String> textStream = Files.lines(inputPath)) {
             listOfUsefulItems = textStream
                                 .map(extractedItems)
-                                .filter(notEmpty)
+                                .filter(isEmpty.negate())
                                 .collect(Collectors.toList());
         }
         catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
 
 
     List<List<String>> getListOfUsefulItems() {
         return listOfUsefulItems;
     }
-
 
 
     @Override
@@ -112,8 +101,4 @@ public class Parser implements FileWriter {
             e.printStackTrace();
         }
     }
-
-
-
-
 }
