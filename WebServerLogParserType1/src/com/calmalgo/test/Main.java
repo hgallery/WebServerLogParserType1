@@ -3,7 +3,7 @@ import java.util.List;
 
 
 /**
- The Main class that uses the Parser class and Statistics class.
+ The Main class uses the Parser class and Statistics class.
  **/
 public class Main {
 
@@ -11,7 +11,6 @@ public class Main {
     public static void main(String[] args) {
 
         var parser = new Parser();
-
         parser.extractListOfUsefulItems();
 
 
@@ -40,6 +39,4 @@ public class Main {
         statistics.writeFile();
 
     }
-
-
 }
