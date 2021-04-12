@@ -41,7 +41,7 @@ class Parser implements FileWriter {
                 int indexBegin = tokens[4].lastIndexOf("/");
                 int indexEnd = tokens[4].lastIndexOf(".");
                 String foodCode = tokens[4].substring(indexBegin+1, indexEnd);
-                extractedItems.add(foodCode);      // food code
+                extractedItems.add(foodCode.toUpperCase());      // food code
 
                 String[] shopAndUser = tokens[7].split("\\\\");
                 extractedItems.add(shopAndUser[0]);     // shop

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  This class has the constants in this project.
  **/
-public class Constants {
+class Constants {
 
     static final String INPUT_FILE_NAME = "input.txt";
     static final String OUTPUT_USEFUL_ITEMS_FILE_NAME = "output_useful_items.txt";
@@ -15,5 +15,6 @@ public class Constants {
     static final String POST_INDICATOR = "POST";
 
     static final List<String> foodCodes = Arrays.asList("VEGGIE001", "VEGGIE002", "PASTA001", "PASTA002");
+
 
 }

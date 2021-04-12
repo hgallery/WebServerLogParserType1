@@ -4,9 +4,9 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 
 /**
@@ -20,7 +20,7 @@ class Statistics implements FileWriter{
     Statistics (List<List<String>> listOfUsefulItems) {
         this.listOfUsefulItems = listOfUsefulItems;
 
-        this.usageVolume = new HashMap<>();
+        this.usageVolume = new TreeMap<>();
         for (String foodCode : Constants.foodCodes)
             usageVolume.put(foodCode, 0);
     }
