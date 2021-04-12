@@ -11,8 +11,8 @@ Whenever employees submit an order to the warehouse, the activity is logged.
 
 The project contains these source files:
 - Parser.java: This class extracts the useful data items and stores them to a list.
-- Statistics.java: This class counts how many orders of each food item have been placed, and stores the countings in key-value pairs in the format of <food_item, number_of_orders>
-- FileWriter.java: This interface is implemented by Parser and Statistics.
+- Statistics.java: This class counts how many orders of each food item have been placed, and stores the counting in key-value pairs in the format of <food_item, number_of_orders>
+- FileWriter.java: This interface is implemented by Parser and Statistics for a pattern.
 - Main.java: This class instantiates Parser and Statistics, and uses them.
 - Constants.java: This class has the constant values used in the project.
 
