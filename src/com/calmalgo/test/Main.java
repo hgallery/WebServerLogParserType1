@@ -24,6 +24,7 @@ public class Main {
         parser.writeFile();
 
 
+
         List<List<String>> listOfUsefulItems = parser.getListOfUsefulItems();
         var statistics = new Statistics(listOfUsefulItems);
         statistics.sumUpUsageVolume();
@@ -37,6 +38,7 @@ public class Main {
         System.out.print(titleUsageVolume);
         statistics.getUsageVolume().forEach( (k,v) -> System.out.println(k + " " + v));
         statistics.writeFile();
+
 
     }
 }

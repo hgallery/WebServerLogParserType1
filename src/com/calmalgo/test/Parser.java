@@ -32,6 +32,8 @@ class Parser implements FileWriter {
 
             if (hasPostIndicator) {
 
+                // Consider throwing Exception
+
                 String[] logFilePathAndDate = tokens[0].split(":");
                 extractedItems.add(logFilePathAndDate[2]);
 
@@ -64,7 +66,7 @@ class Parser implements FileWriter {
 
     void extractListOfUsefulItems() {
         Path inputPath = Path.of(Constants.INPUT_FILE_NAME);
-        try (Stream<String> textStream = Files.lines(inputPath)) {
+        try (Stream<String> textStream = Files.lines(inputPath)) {  // optional: charset
             listOfUsefulItems = textStream
                                 .map(extractedItems)
                                 .filter(isEmpty.negate())

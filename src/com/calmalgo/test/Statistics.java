@@ -36,6 +36,9 @@ class Statistics implements FileWriter{
         }
     }
 
+
+
+
     @Override
     public void writeFile() {
 
