@@ -32,22 +32,29 @@ class Parser implements FileWriter {
 
             if (hasPostIndicator) {
 
-                // Consider throwing Exception
-
                 String[] logFilePathAndDate = tokens[0].split(":");
                 extractedItems.add(logFilePathAndDate[2]);
 
                 extractedItems.add(tokens[1]);     // time
                 extractedItems.add(tokens[3]);     // POST indicator
 
-                int indexBegin = tokens[4].lastIndexOf("/");
-                int indexEnd = tokens[4].lastIndexOf(".");
-                String foodCode = tokens[4].substring(indexBegin+1, indexEnd);
-                extractedItems.add(foodCode.toUpperCase());      // food code
 
-                String[] shopAndUser = tokens[7].split("\\\\");
-                extractedItems.add(shopAndUser[0]);     // shop
-                extractedItems.add(shopAndUser[1]);     // user_id
+                if (tokens.length >= 5 && tokens[4].contains("/") && tokens[4].contains(".")) {
+                    int indexBegin = tokens[4].lastIndexOf("/");
+                    int indexEnd = tokens[4].lastIndexOf(".");
+
+
+                    if (indexBegin+1 < indexEnd) {
+                        String foodCode = tokens[4].substring(indexBegin + 1, indexEnd);
+                        extractedItems.add(foodCode.toUpperCase());      // food code
+                    }
+
+                    if (tokens.length >= 8 && tokens[7].contains("\\")) {
+                        String[] shopAndUser = tokens[7].split("\\\\");
+                        extractedItems.add(shopAndUser[0]);     // shop
+                        extractedItems.add(shopAndUser[1]);     // user_id
+                    }
+                }
             }
             else {
                 extractedItems.add("");
@@ -66,8 +73,9 @@ class Parser implements FileWriter {
 
     void extractListOfUsefulItems() {
         Path inputPath = Path.of(Constants.INPUT_FILE_NAME);
-        try (Stream<String> textStream = Files.lines(inputPath)) {  // optional: charset
+        try (Stream<String> textStream = Files.lines(inputPath)) {  // consider charset
             listOfUsefulItems = textStream
+                                .parallel()
                                 .map(extractedItems)
                                 .filter(isEmpty.negate())
                                 .collect(Collectors.toList());
