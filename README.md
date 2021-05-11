@@ -1,7 +1,7 @@
 # WebServerLogParserType1
 
 Purpose:
-For a specific log file format, this program extracts the useful data items, and sums up the selected data.
+For a specific log file format, this CLI application extracts the useful data items, and sums up the selected data.
 
 Scenario:
 There are a number of shops that sell food items.
@@ -28,6 +28,18 @@ A number of modern techniques and features are used in the program including:
 - Non-blocking I/O ver. 2
 - var of Java 10
 - Text Block of Java 15
+
+About Functional Programmming:
+It is aimed maintaining the existing Lambda functions as pure functional, and potentially creating new ones of the same characteristic.
+A Lambda function is considered pure if it meets these requirements:
+- The return value of the function depends only on the input parameters passed to the function.
+- The execution of the function brings no side-effects.
+
+The Main branch: 
+This branch doesn't contain the IDE's configuration files. The current plan is to maintain the original prototype at this branch. Thus no changes or only minor updates will be pushed to there.
+
+The Master branch:
+This branch contains the IntelliJ IDEA's configuration files.  The current plan is to evolve from this branch.
 
 These development tools have been used:
 - OpenJDK
