@@ -1,6 +1,7 @@
 drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.100 POST /FOOD/VEGGIE/VEGGIE001.EXT - 80 SHOP_1\user_id_1234 172.217.10.35 some text here some more text here a lot of text here
 drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.100 GET /FOOD/folder_name/file_name.ext - 80 SHOP_1\user_id_1234 172.217.10.35 some text here some more text here a lot of text here
 drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.100 GET /FOOD/folder_name/file_name.ext - 80 SHOP_1\user_id_1234 172.217.10.35 some text here some more text here a lot of text here
+
 drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.100 POST /FOOD/VEGGIE/VEGGIE002.EXTX - 80 SHOP_2\user_id_5678 172.217.10.35 some text here some more text here a lot of text here
 drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.100 POST /FOOD/PASTA/PASTA001.EXT - 80 SHOP_1\user_id_7890 172.217.10.35 some text here some more text here a lot of text here
 drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.100 POST /FOOD/VEGGIE/VEGGIE002.EXTX - 80 SHOP_1\user_id_1234 172.217.10.35 some text here some more text here a lot of text here
@@ -8,5 +9,6 @@ drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.10
 drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.100 GET /FOOD/folder_name/file_name.ext - 80 SHOP_1\user_id_1234 172.217.10.35 some text here some more text here a lot of text here
 drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.100 POST /FOOD/PASTA/PASTA002.EXTX - 80 SHOP_1\user_id_7890 172.217.10.35 some text here some more text here a lot of text here
 drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.100 GET /FOOD/folder_name/file_name.ext - 80 SHOP_1\user_id_1234 172.217.10.35 some text here some more text here a lot of text here
+
 drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.100 POST /FOOD/PASTA/pasta002.EXTX - 80 SHOP_1\user_id_2468 172.217.10.35 some text here some more text here a lot of text here
 drive:\folder1\folder2\folderN\logFileName.ext:yyyy-mm-dd hh-mm-ss 142.250.64.100 GET /FOOD/folder_name/file_name.ext - 80 SHOP_1\user_id_1234 172.217.10.35 some text here some more text here a lot of text here
