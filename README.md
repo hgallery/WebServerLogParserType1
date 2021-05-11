@@ -1,27 +1,29 @@
 # WebServerLogParserType1
 
-Purpose:
+**Purpose:**  
+
 For a specific log file format, this CLI application extracts the useful data items, and sums up the selected data.
 
-Scenario:
-There are a number of shops that sell food items.
-Each shop has a number of employees.
-There is a warehouse that supplies food items to the shops.
-Whenever employees submit an order to the warehouse, the activity is logged.
+**Scenario:**  
 
-The project contains these source files:
+There are a number of shops that sell food items. Each shop has a number of employees. There is a warehouse that supplies food items to the shops. Whenever employees submit an order to the warehouse, the activity is logged.
+
+**The project contains these source files:**  
+
 - Parser.java: This class extracts the useful data items and stores them to a list.
 - Statistics.java: This class counts how many orders of each food item have been placed, and stores the counting in key-value pairs in the format of <food_item, number_of_orders>
 - FileWriter.java: This interface is implemented by Parser and Statistics for a pattern.
 - Main.java: This class instantiates Parser and Statistics, and uses them.
 - Constants.java: This class has the constant values used in the project.
 
-The project contains these data files:
+**The project contains these data files:**  
+
 - Input file: input.txt (The program reads the data from this log file that is in a specific format.)
 - Output file 1: output_useful_items.txt  (The program writes the extracted data items to this file.)
 - Output file 2: output_usage_volume.txt  (The program writes the food ordering usage volume to this file.)
 
-A number of modern techniques and features are used in the program including:
+**A number of modern techniques and features are used including:**  
+
 - Generics
 - Lambda Expression
 - Functional Programming
@@ -29,18 +31,19 @@ A number of modern techniques and features are used in the program including:
 - var of Java 10
 - Text Block of Java 15
 
-About Functional Programmming:
+**About Functional Programmming:**  
+
 It is aimed maintaining the existing Lambda functions as pure functional, and potentially creating new ones of the same characteristic.
-A Lambda function is considered pure if it meets these requirements:
+A Lambda function is considered pure if it meets these requirements:  
 - The return value of the function depends only on the input parameters passed to the function.
 - The execution of the function brings no side-effects.
 
-The Main branch: 
-This branch doesn't contain the IDE's configuration files. The current plan is to maintain the original prototype at this branch. Thus no changes or only minor updates will be pushed to there.
+**About Branching:**  
 
-The Master branch:
-This branch contains the IntelliJ IDEA's configuration files.  The current plan is to evolve from this branch.
+***Main branch:*** This branch doesn't contain the IDE's configuration files. The current plan is to maintain the original prototype at this branch. Thus no changes or only minor updates will be pushed to there.  
+***Master branch:*** This branch contains the IntelliJ IDEA's configuration files.  The current plan is to evolve from this branch.
 
-These development tools have been used:
+**These development tools have been used:**  
+
 - OpenJDK
 - IntelliJ IDEA
