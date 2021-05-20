@@ -1,28 +1,32 @@
 # WebServerLogParserType1
 
-**Purpose:**  
+**Purpose:**
 
-For a specific log file format, this CLI application extracts the useful data items, and sums up the selected data.
+For a specific log file format, this CLI application extracts and analyzes the data.
 
-**Scenario:**  
+**Scenario:**
 
-There are a number of shops that sell food items. Each shop has a number of employees. There is a warehouse that supplies food items to the shops. Whenever employees submit an order to the warehouse, the activity is logged.
+There are a number of shops that sell food items.
+Each shop has a number of employees.
+There is a warehouse that supplies food items to the shops.
+Whenever employees submit an order to the warehouse, the activity is logged.
 
-**The project contains these source files:**  
+**The project contains these source files:**
 
-- Parser.java: This class extracts the useful data items and stores them to a list.
-- Statistics.java: This class counts how many orders of each food item have been placed, and stores the counting in key-value pairs in the format of <food_item, number_of_orders>
-- FileWriter.java: This interface is implemented by Parser and Statistics for a pattern.
-- Main.java: This class instantiates Parser and Statistics, and uses them.
-- Constants.java: This class has the constant values used in the project.
+- ``Parser.java``: This class extracts the useful data items and stores them to a list.
+- ``Statistics.java``: This class counts how many orders of each food item have been placed, 
+  and stores the counting in key-value pairs in the format of <food_item, number_of_orders>
+- ``FileWriter.java``: This interface is implemented by Parser and Statistics for a pattern.
+- ``Main.java``: This class instantiates Parser and Statistics, and uses their methods.
+- ``Constants.java``: This class has the constant values used in the project.
 
-**The project contains these data files:**  
+**The project contains these data files:**
 
-- Input file: input.txt (The program reads the data from this log file that is in a specific format.)
-- Output file 1: output_useful_items.txt  (The program writes the extracted data items to this file.)
-- Output file 2: output_usage_volume.txt  (The program writes the food ordering usage volume to this file.)
+- Input file: ``input.txt`` (The Parser program reads the data from this log file that is in a specific format.)
+- Output file 1: ``output_useful_items.txt``  (The Parser program writes the extracted data to this file.)
+- Output file 2: ``output_usage_volume.txt``  (The Statistics program writes the food ordering usage to this file.)
 
-**A number of modern techniques and features are used including:**  
+**A number of modern techniques and features are used including:**
 
 - Generics
 - Lambda Expression
@@ -31,19 +35,19 @@ There are a number of shops that sell food items. Each shop has a number of empl
 - var of Java 10
 - Text Block of Java 15
 
-**About Functional Programmming:**  
+**About Functional Programming:**
 
-It is aimed maintaining the existing Lambda functions as pure functional, and potentially creating new ones of the same characteristic.
-A Lambda function is considered pure if it meets these requirements:  
+It is aimed at having Lambda functions only in pure functional form. A Lambda function is considered pure if it meets these requirements:
 - The return value of the function depends only on the input parameters passed to the function.
-- The execution of the function brings no side-effects.
+- The execution of the function brings no side effects. (Search for this topic on the Internet if further information is required.)
 
-**About Branching:**  
+By maintaining the pure functional form, developers can consider applying parallel stream processing.
 
-***Main branch:*** This branch doesn't contain the IDE's configuration files. The current plan is to maintain the original prototype at this branch. Thus no changes or only minor updates will be pushed to there.  
-***Master branch:*** This branch contains the IntelliJ IDEA's configuration files.  The current plan is to evolve from this branch.
+**About Branching:**
 
-**These development tools have been used:**  
+***Main branch:*** contains only the program files, input file, output files, and this Readme file.  
+***Master branch:*** also contains the IntelliJ IDEA's configuration files but not this Readme file.
 
+**These development tools have been used:**
 - OpenJDK
 - IntelliJ IDEA
