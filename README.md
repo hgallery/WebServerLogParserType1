@@ -26,6 +26,20 @@ Whenever employees submit an order to the warehouse, the activity is logged.
 - Output file 1: ``output_useful_items.txt``  (The Parser program writes the extracted data to this file.)
 - Output file 2: ``output_usage_volume.txt``  (The Statistics program writes the food ordering usage to this file.)
 
+
+**About Functional Programming:**
+
+It is aimed at having Lambda functions only in pure functional form. A function is considered pure if it meets these requirements:
+- The return value of the function depends only on the input parameters passed to the function.
+- The execution of the function brings no side effects. (Search for this topic on the Internet if further information is required.)
+
+By maintaining the pure functional form, developers can consider applying parallel stream processing.
+
+**About Branching:**
+
+***Main branch:*** contains only the program files, input file, output files, and this Readme file.  
+***Master branch:*** also contains the IntelliJ IDEA's configuration files.
+
 **A number of modern techniques and features are used including:**
 
 - Generics
@@ -35,18 +49,6 @@ Whenever employees submit an order to the warehouse, the activity is logged.
 - var of Java 10
 - Text Block of Java 15
 
-**About Functional Programming:**
-
-It is aimed at having Lambda functions only in pure functional form. A Lambda function is considered pure if it meets these requirements:
-- The return value of the function depends only on the input parameters passed to the function.
-- The execution of the function brings no side effects. (Search for this topic on the Internet if further information is required.)
-
-By maintaining the pure functional form, developers can consider applying parallel stream processing.
-
-**About Branching:**
-
-***Main branch:*** contains only the program files, input file, output files, and this Readme file.  
-***Master branch:*** also contains the IntelliJ IDEA's configuration files but not this Readme file.
 
 **These development tools have been used:**
 - OpenJDK
