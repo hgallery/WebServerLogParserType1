@@ -1,0 +1,6 @@
+yyyy-mm-dd hh-mm-ss POST VEGGIE001 SHOP_1 user_id_1234 
+yyyy-mm-dd hh-mm-ss POST VEGGIE002 SHOP_2 user_id_5678 
+yyyy-mm-dd hh-mm-ss POST PASTA001 SHOP_1 user_id_7890 
+yyyy-mm-dd hh-mm-ss POST VEGGIE002 SHOP_1 user_id_1234 
+yyyy-mm-dd hh-mm-ss POST PASTA002 SHOP_1 user_id_7890 
+yyyy-mm-dd hh-mm-ss POST PASTA002 SHOP_1 user_id_2468 
